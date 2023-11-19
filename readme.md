@@ -77,6 +77,8 @@ https://www.cnblogs.com/FreeSql/p/17836000.html
 
 FreeSql 一年没发文章了，发一次就被针对 seo 关键字，好歹先测试下再发文章啊！~~
 
+提示：测试你不是贬低你
+
 ## EFCore v8.0 + Sqlite
 
 ```shell
