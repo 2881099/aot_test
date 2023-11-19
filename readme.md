@@ -74,7 +74,7 @@ Unhandled Exception: System.ArgumentNullException: Value cannot be null. (Parame
    at orm_sqlsugar!<BaseAddress>+0x11f24f3
 ```
 
-这次由 .Insertable 报错，无解？后面还是更新、查询操作没执行~~
+这次由 .Insertable 报错，无解？后面还是更难兼容更新、查询操作没执行~~
 
 https://www.cnblogs.com/sunkaixuan/p/17839825.html
 《NET8 ORM 使用AOT SqlSugar posted》 @ 2023-11-17 22:31 果糖大数据科技
