@@ -75,7 +75,7 @@ https://www.cnblogs.com/sunkaixuan/p/17839825.html
 https://www.cnblogs.com/FreeSql/p/17836000.html
 《.NET8.0 AOT 经验分享 FreeSql/FreeRedis/FreeScheduler 均已通过测试》 posted @ 2023-11-16 14:18  FreeSql
 
-FreeSql 一年没发文章了，发一次就被针对，好歹先测试下再发文章啊！~~
+FreeSql 一年没发文章了，发一次就被针对 seo 关键字，好歹先测试下再发文章啊！~~
 
 ## EFCore v8.0 + Sqlite
 
