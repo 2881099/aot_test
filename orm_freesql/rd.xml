@@ -1,0 +1,6 @@
+﻿<Directives>
+	<Application>
+		<Assembly Name="orm_freesql"  Dynamic="Required All">
+		</Assembly>
+	</Application>
+</Directives>

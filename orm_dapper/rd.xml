@@ -1,0 +1,6 @@
+﻿<Directives>
+	<Application>
+		<Assembly Name="FreeSql"  Dynamic="Required All">
+		</Assembly>
+	</Application>
+</Directives>

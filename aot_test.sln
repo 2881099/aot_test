@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "orm_chloe", "orm_chloe\orm_chloe.csproj", "{56DAEF88-C1EF-434E-8858-19D75220071C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "orm_dapper", "orm_dapper\orm_dapper.csproj", "{A64C8346-3733-44BF-938A-3ACBB3DEFDDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "orm_efcore", "orm_efcore\orm_efcore.csproj", "{9884827A-FE85-484A-A488-AE9556DA322B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "orm_freesql", "orm_freesql\orm_freesql.csproj", "{F18F9E07-DC87-476F-AD6F-AFC980AFD152}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "orm_sqlsugar", "orm_sqlsugar\orm_sqlsugar.csproj", "{DF9A2D60-A10F-4A29-9228-8C833BE30045}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{F98F2123-23AD-4037-9E2A-40B420D4A5D2}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56DAEF88-C1EF-434E-8858-19D75220071C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56DAEF88-C1EF-434E-8858-19D75220071C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56DAEF88-C1EF-434E-8858-19D75220071C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56DAEF88-C1EF-434E-8858-19D75220071C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64C8346-3733-44BF-938A-3ACBB3DEFDDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64C8346-3733-44BF-938A-3ACBB3DEFDDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64C8346-3733-44BF-938A-3ACBB3DEFDDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64C8346-3733-44BF-938A-3ACBB3DEFDDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9884827A-FE85-484A-A488-AE9556DA322B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9884827A-FE85-484A-A488-AE9556DA322B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9884827A-FE85-484A-A488-AE9556DA322B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9884827A-FE85-484A-A488-AE9556DA322B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F18F9E07-DC87-476F-AD6F-AFC980AFD152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F18F9E07-DC87-476F-AD6F-AFC980AFD152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F18F9E07-DC87-476F-AD6F-AFC980AFD152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F18F9E07-DC87-476F-AD6F-AFC980AFD152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF9A2D60-A10F-4A29-9228-8C833BE30045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF9A2D60-A10F-4A29-9228-8C833BE30045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF9A2D60-A10F-4A29-9228-8C833BE30045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF9A2D60-A10F-4A29-9228-8C833BE30045}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9DC5108-7590-423E-B44C-62AAA36F6EF7}
+	EndGlobalSection
+EndGlobal
