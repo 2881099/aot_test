@@ -26,8 +26,8 @@ PS：没有对 AOT 的支持做专门改进，都是老代码。
 ```shell
 发布耗时 01:22.813 分钟
 
-orm_efcore.exe                   ( 39,875KB)
-orm_efcore.pdb                   (266,084KB)
+orm_sqlsugar.exe                   ( 39,875KB)
+orm_sqlsugar.pdb                   (266,084KB)
 e_sqlite3                        (  1,597KB)
 Microsoft.Data.SqlClient.SNI.dll (    499KB)
 
