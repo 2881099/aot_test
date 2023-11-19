@@ -2,5 +2,7 @@
 	<Application>
 		<Assembly Name="orm_sqlsugar"  Dynamic="Required All">
 		</Assembly>
+		<Assembly Name="SqlSugar" Dynamic="Required All">
+		</Assembly>
 	</Application>
 </Directives>

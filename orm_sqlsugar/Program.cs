@@ -8,6 +8,7 @@ Console.WriteLine("【SqlSugar AOT】开始测试...");
 
 var sw = new Stopwatch();
 
+StaticConfig.EnableAot = true;
 using (SqlSugarClient Db = new SqlSugarClient(new ConnectionConfig()
 	{
 	ConnectionString = $"Data Source={AppContext.BaseDirectory}/test1.db",
@@ -72,6 +73,7 @@ List<TaskInfo> GetRandData(int size)
 }
 public class TaskInfo
 {
+	[SqlSugar.SugarColumn(IsPrimaryKey = true)]
 	public string Id { get; set; }
 	public string Topic { get; set; }
 	public string Body { get; set; }

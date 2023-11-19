@@ -3,7 +3,7 @@ aot_test 用于测试 AOT 发布的结果 [2023-11-19]
 | 测试项目 | 发布耗时 | 发布后 .exe 体积 | 发布后 .pdb 体积 | 通过AOT |
 | -- | -- | -- | -- | -- |
 | FreeSql v3.2.805 + Sqlite | 31.882 秒 | 16,927KB | 123,812KB | 通过 |
-| SqlSugar v5.1.4.117 + Sqlite | 82.813 秒 | 39,875KB | 266,084KB | 未通过 |
+| SqlSugar v5.1.4.117 + Sqlite | 111.002 秒 | 50,133KB | 346,412KB | 通过 |
 | EFCore v8.0 + Sqlite | 50.749 | 17,410KB | 168,788KB | 未通过 |
 | DapperAOT | 未测试（支持） | 未测试（支持） | 未测试（支持） | 通过 |
 
@@ -32,49 +32,29 @@ PS：没有对 AOT 的支持做专门改进，都是老代码。
 
 ## SqlSugar v5.1.4.117 + Sqlite
 
-```shell
-发布耗时 01:22.813 分钟
+程序代码设置要求：
 
-orm_sqlsugar.exe                 ( 39,875KB)
-orm_sqlsugar.pdb                 (266,084KB)
+```csharp
+StaticConfig.EnableAot = true;
+```
+
+```shell
+发布耗时 01:51.002 分钟
+
+orm_sqlsugar.exe                 ( 50,133KB)
+orm_sqlsugar.pdb                 (346,412KB)
 e_sqlite3                        (  1,597KB)
 Microsoft.Data.SqlClient.SNI.dll (    499KB)
 
 E:\github\aot_test\orm_sqlsugar\bin\Release\net8.0\publish\win-x64>orm_sqlsugar.exe
 【SqlSugar AOT】开始测试...
-Unhandled Exception: System.ArgumentNullException: Value cannot be null. (Parameter 'type')
-   at System.ArgumentNullException.Throw(String) + 0x2b
-   at System.ActivatorImplementation.CreateInstance(Type, Boolean) + 0xe7
-   at SqlSugar.InstanceFactory.NoCacheGetCacheInstance[T](String) + 0x84
-   at SqlSugar.InstanceFactory.CreateInstance[T](String) + 0x82
-   at SqlSugar.InstanceFactory.GetCodeFirst(ConnectionConfig) + 0x3e
-   at SqlSugar.SqlSugarProvider.get_CodeFirst() + 0x1a
-   at Program.<Main>$(String[] args) + 0x138
-   at orm_sqlsugar!<BaseAddress>+0x11f25d3
+Insert 1条 214ms
+Select 1条 29ms
+Update 1条 119ms
+Select 1条 0ms
+Delete 1条 82ms
+【SqlSugar AOT】测试结束.
 ```
-
-上述由 .CodeFirst.InitTables\<TaskInfo\>() 报错，去掉该代码手工创建表之后，再次发布运行：
-
-```shell
-发布耗时 59.911 秒
-
-E:\github\aot_test\orm_sqlsugar\bin\Release\net8.0\publish\win-x64>orm_sqlsugar.exe
-【SqlSugar AOT】开始测试...
-Unhandled Exception: System.ArgumentNullException: Value cannot be null. (Parameter 'type')
-   at System.ArgumentNullException.Throw(String) + 0x2b
-   at System.ActivatorImplementation.CreateInstance(Type, Boolean) + 0xe7
-   at SqlSugar.InstanceFactory.NoCacheGetCacheInstance[T](String) + 0x84
-   at SqlSugar.InstanceFactory.CreateInstance[T](String) + 0x82
-   at SqlSugar.InstanceFactory.GetSqlbuilder(ConnectionConfig) + 0x7a
-   at SqlSugar.SqlSugarProvider.CreateInsertable[T](T[]) + 0x39
-   at SqlSugar.SqlSugarProvider.Insertable[T](T[] insertObjs) + 0x3b
-   at SqlSugar.SqlSugarProvider.Insertable[T](List`1 insertObjs) + 0xb5
-   at SqlSugar.SqlSugarClient.Insertable[T](List`1) + 0x44
-   at Program.<Main>$(String[] args) + 0x1af
-   at orm_sqlsugar!<BaseAddress>+0x11f24f3
-```
-
-这次由 .Insertable 报错，无解？后面还是更难兼容更新、查询操作没执行~~
 
 https://www.cnblogs.com/sunkaixuan/p/17839825.html
 《NET8 ORM 使用AOT SqlSugar posted》 @ 2023-11-17 22:31 果糖大数据科技
@@ -84,7 +64,7 @@ https://www.cnblogs.com/sunkaixuan/p/17839825.html
 https://www.cnblogs.com/FreeSql/p/17836000.html
 《.NET8.0 AOT 经验分享 FreeSql/FreeRedis/FreeScheduler 均已通过测试》 posted @ 2023-11-16 14:18  FreeSql
 
-FreeSql 一年没发文章了，发一次就被针对 seo 关键字，好歹先测试下再发文章啊！~~
+FreeSql 一年没发文章了，发一次就被针对 seo 关键字，赶鸭子上架功能，厉害的反射性能怎么办啊？~~
 
 提示：测试你不是贬低你
 
